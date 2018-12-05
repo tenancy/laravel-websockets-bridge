@@ -1,0 +1,34 @@
+{
+    "name": "tenancy/laravel-websockets-bridge",
+    "description": "Package to bridge beyondcode/laravel-websockets to hyn/multi-tenant.",
+    "require": {
+        "php": ">=7.3",
+        "beyondcode/laravel-websockets": "^1.0",
+        "hyn/multi-tenant": "^5.3",
+        "illuminate/encryption": "^5.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eric Fletcher",
+            "email": "eric@thefletcher.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tenancy\\LaravelWebsockets\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tenancy\\LaravelWebsockets\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tenancy\\LaravelWebsockets\\Providers\\TenancyWebsocketsProvider"
+            ]
+        }
+    }
+}
