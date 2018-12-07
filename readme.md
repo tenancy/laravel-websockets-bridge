@@ -1,4 +1,4 @@
-<aside>This was created in 2 hours and has not been tested.  I can't even guarantee there's a need beyond what `beyondcode/laravel-websockets` provides natively.  It goes without saying that this exists without warranty of success.</aside> 
+<p style="color: red">This was created in 2 hours and has not been tested.  I can't even guarantee there's a need beyond what <span style="font:monospace">beyondcode/laravel-websockets</span> provides natively.  It goes without saying that this exists without warranty of success.</p> 
 
 # How to install:
 1. Run `composer require tenancy/laravel-websockets-bridge`
