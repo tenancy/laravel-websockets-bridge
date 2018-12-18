@@ -14,7 +14,11 @@ class TenancyAppProvider implements AppProvider
     }
     public function all(): array
     {
-        $this->repository->query()->get();
+        return $this->repository->query()->get()
+            ->map(function ($website) {
+                return $this->instantiate($website);
+            })
+            ->toArray();
     }
 
     public function findById($appId): ?App
