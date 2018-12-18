@@ -15,7 +15,7 @@ class TenancyAppProvider implements AppProvider
     public function all(): array
     {
         return $this->repository->query()->get()
-            ->map(function ($website) {
+            ->map(function (Website $website) {
                 return $this->instantiate($website);
             })
             ->toArray();
@@ -43,7 +43,7 @@ class TenancyAppProvider implements AppProvider
         return $this->instantiate($website);
     }
 
-    protected function instantiate(Website $website): ?App
+    protected function instantiate(?Website $website): ?App
     {
         if (! $website) {
             return null;
