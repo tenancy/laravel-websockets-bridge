@@ -26,6 +26,9 @@
     },
     "extra": {
         "laravel": {
+            "dont-discover": [
+                "beyondcode/laravel-websockets"
+            ],
             "providers": [
                 "Tenancy\\LaravelWebsockets\\Providers\\BridgeServiceProvider"
             ]
