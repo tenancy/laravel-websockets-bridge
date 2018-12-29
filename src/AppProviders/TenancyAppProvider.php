@@ -43,9 +43,7 @@ class TenancyAppProvider implements AppProvider
 
     public function findBySecret(string $appSecret): ?App
     {
-        $uuid = app('encrypter')->decrypt($appSecret);
-
-        $website = $this->getRepositoryQuery()->where('uuid', $uuid)->first();
+        $website = $this->getRepositoryQuery()->where('uuid', $appSecret)->first();
 
         $this->identify($website);
 
@@ -76,7 +74,7 @@ class TenancyAppProvider implements AppProvider
         $app = new App(
             $website->uuid,
             $website->uuid,
-            app('encrypter')->encrypt($website->uuid)
+            $website->uuid
         );
 
         $app->enableClientMessages();

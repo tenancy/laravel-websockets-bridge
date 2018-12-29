@@ -30,7 +30,7 @@ class SetTenantPusherConfig
 
             app('config')->set('broadcasting.connections.pusher.app_id', $uuid);
             app('config')->set('broadcasting.connections.pusher.key', $uuid);
-            app('config')->set('broadcasting.connections.pusher.secret', app('encrypter')->encrypt($uuid));
+            app('config')->set('broadcasting.connections.pusher.secret', $uuid);
         }
     }
 }
