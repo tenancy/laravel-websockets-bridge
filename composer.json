@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Tenancy\\LaravelWebsockets\\Providers\\TenancyWebsocketsProvider"
+                "Tenancy\\LaravelWebsockets\\Providers\\BridgeServiceProvider"
             ]
         }
     }

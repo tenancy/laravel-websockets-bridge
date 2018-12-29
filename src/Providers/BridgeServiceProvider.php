@@ -3,7 +3,7 @@ namespace Tenancy\LaravelWebsockets\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class TenancyWebsocketsProvider extends ServiceProvider
+class BridgeServiceProvider extends ServiceProvider
 {
     public function register()
     {
